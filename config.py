@@ -4,7 +4,8 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    API_KEY = os.environ.get('API_KEY')
+    BASE_URL = os.environ.get('BASE_URL')
 
 
 
