@@ -79,8 +79,10 @@ def get_sources():
         response_data = list()
         
         if response_dict['sources']:
-            processingDict = url.read()
-            response_dict = json.loads(url_response)
+            processing_dict = response_dict['sources']     
+            response_data = source_instanciator(processing_dict)
+            print(response_data)
+            
             
     return response_data
             
