@@ -3,11 +3,27 @@
 <!-- Start of for block -->
 {% for article in article_list %}
 
-<div class="card">
-  <img class="card-img-top" src="{{article.}}" alt="" />
-  <div class="card-body">
-    <h4 class="card-title">Title</h4>
-    <p class="card-text">Text</p>
+<div class="card rounded border-0 shadow rounded article-item">
+  <div class="article-img-container card-img-top">
+    <img
+      class="article-image"
+      src="{{source.image_url}}"
+      alt="{{source.title}}"
+    />
+  </div>
+  <div class="card-body mt-3">
+    <div class="article-details-row">
+      <p class="article-details-row-item">{{source.author}}</p>
+      <p class="article-details-row-item-2">{{source.source}}</p>
+    </div>
+    <h4 class="card-title article-title">{{source.title}}</h4>
+
+    <p class="card-text article-body">{{source.content}}</p>
+    <div class="article-link-row">
+      <a class="article-link-row-item" href="{{source.url}}" target="_blank">
+        Read More</a
+      >
+    </div>
   </div>
 </div>
 
