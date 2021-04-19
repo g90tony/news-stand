@@ -1,0 +1,34 @@
+{% macro articles(article_list) %}
+
+<!-- Start of for block -->
+{% for article in article_list %}
+
+<div class="card rounded border-0 shadow rounded article-item">
+  <div class="article-img-container card-img-top">
+    <img
+      class="article-image"
+      src="{{article.image_url}}"
+      alt="{{article.title}}"
+    />
+  </div>
+  <div class="card-body mt-3">
+    <div class="article-details-row">
+      <p class="article-details-row-item">{{article.author}}</p>
+      <p class="article-details-row-item-2">{{article.source}}</p>
+    </div>
+    <h4 class="card-title article-title">{{article.title}}</h4>
+
+    <p class="card-text article-body">{{article.content}}</p>
+    <div class="article-link-row">
+      <a class="article-link-row-item" href="{{article.url}}" target="_blank">
+        Read More</a
+      >
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+<!-- End of for block -->
+
+{% endmacro %}
+<!-- End of macro -->
