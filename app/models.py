@@ -8,6 +8,7 @@ class Source:
         self.language = language
         self.country = country
 
+
     def addArticles(sourceArticles):
         Source.allArticles.append = sourceArticles
         
