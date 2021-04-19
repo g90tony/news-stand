@@ -20,6 +20,10 @@
   overflow: hidden;
 }
 
+.source-title {
+  height: fit-content !important;
+}
+
 .article-details-row {
   display: flex;
   flex-flow: row wrap;
