@@ -9,7 +9,24 @@ def configure_request(app):
     api_key = app.config['API_KEY']
     base_url = app.config['BASE_URL']
     
+def source_instanciator(unprocessed_data):
+    processed_data = list()
+    
+    for item in unprocessed_data:
+        id = item.get("id")
+        name = item.get("name")
+        description = item.get("description")
+        url = item.get("url")
+        category = item.get("category")
+        language = item.get("language")
+        country = item.get("country")
 
+        
+        if name:
+            source_instance = Source(id, name, description, url, category, language, country)
+            processed_data.append(source_instance)
+            
+    return processed_data
 
 
 def article_instanciator(unprocessed_data):
