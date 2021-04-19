@@ -11,7 +11,7 @@ def index():
     return render_template('sources.html', title = title, sources= sources)
 
 @main.route('/source/<name>')
-def index():
+def source_articles():
     title = f'{name}: Articles from {name}'
     articles = get_articles('top-headlines?country=us')
     return render_template('articles.html', title = title, articles= articles)
