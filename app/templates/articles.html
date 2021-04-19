@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% import 'article_generator.html' as generator %}
+<!-- start of content block -->
+{% block content%}
+
+<div class="container">
+  <div class="row justify-content-center">{{generator.articles(articles)}}</div>
+</div>
+
+{% endblock %}
+<!-- End of content block -->

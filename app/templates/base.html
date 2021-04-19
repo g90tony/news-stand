@@ -18,8 +18,17 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='stylesheets/index.css')}}"
+    />
   </head>
   <body>
+    <!-- Start of navbar block -->
+    {% include 'navbar.html' %}
+    <!-- Start of navbar block -->
+
     <!-- Start of content block -->
     {% block content %} {% endblock %}
     <!-- End of content block -->
