@@ -17,8 +17,7 @@ class Source:
     
     
 class Article:
-    def __init__(self, id, author, title, description, url, image_url, published_at, content):
-        self.id = id 
+    def __init__(self, author, title, description, url, image_url, published_at, content):
         self.author = author 
         self.title = title 
         self.description = description 
