@@ -10,7 +10,7 @@ def configure_request(app):
     base_url = app.config['BASE_URL']
     
 def article_instanciator(unprocessed_data):
-        processed_data = list()
+    processed_data = list()
     
     for item in unprocessed_data:
         # id = item.get('id')
