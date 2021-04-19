@@ -81,7 +81,7 @@ def get_sources():
         if response_dict['sources']:
             processing_dict = response_dict['sources']     
             response_data = source_instanciator(processing_dict)
-            print(response_data)
+            
             
             
     return response_data
