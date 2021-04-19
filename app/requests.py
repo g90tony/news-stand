@@ -9,6 +9,26 @@ def configure_request(app):
     api_key = app.config['API_KEY']
     base_url = app.config['BASE_URL']
     
+def article_instanciator(unprocessed_data):
+        processed_data = list()
+    
+    for item in unprocessed_data:
+        # id = item.get('id')
+        author = item.get('author')
+        title = item.get('title')
+        description = item.get('description')
+        url = item.get('url')
+        image_url = item.get('image_url')
+        published_at = item.get('published_at')
+        content = item.get('content')
+        
+        if author:
+            article_instance = Article(author, title, description, url, image_url, published_at, content)
+            processed_data.append(article_instance)
+            
+    return processed_data
+
+    
 def get_articles(category):
     
     request_url = base_url.format('top-headlines', api_key)
@@ -21,7 +41,7 @@ def get_articles(category):
         
         if response_dict['results']:
             processing_dict = response_data['results']            
-            response_data = processed_data(processing_dict)
+            response_data = article_instanciator(processing_dict)
         
     return response_data
              
