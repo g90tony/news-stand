@@ -1,6 +1,16 @@
+body {
+  background-color: #eaebed;
+}
+
+.custom-navbar {
+  background-color: #a30015 !important;
+}
+
 .article-item {
   width: 275px;
   margin: 10px;
+  background-color: #a30015;
+  color: #eaebed;
 }
 
 .article-img-container {
@@ -18,6 +28,17 @@
   margin-bottom: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: #a3bac3;
+}
+
+.source-title {
+  font-size: 2px;
+  font-weight: 800;
+  height: 125px;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #a3bac3;
 }
 
 .source-title {
@@ -62,9 +83,13 @@
 }
 
 .article-link-row-item {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   text-decoration: none;
+  color: #eaebed !important;
+  border: 1px solid #eaebed;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 .article-body {
